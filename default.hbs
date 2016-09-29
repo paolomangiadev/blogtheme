@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{!-- Document Settings --}}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{!-- Page Meta --}}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    {{!-- Mobile Meta --}}
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{!-- Brand icon --}}
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+    {{!-- Styles'n'Scripts --}}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/prism.css"}}" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300i,400i" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/font-awesome/css/font-awesome.min.css"}}">
+    {{!-- Ghost outputs important style and meta data with this tag --}}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}} nav-closed">
+
+    {{!-- The blog navigation links --}}
+    {{navigation}}
+
+    <div class="site-wrapper">
+
+        {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+        {{{body}}}
+
+        {{!-- The tiny footer at the very bottom --}}
+        <footer class="site-footer clearfix">
+            <div class="custom-container">
+            <div class="subscribe">
+
+            </div>
+
+            <div class="single-footer" id="first">
+                  <h5>Menu</h5>
+                  <span class="line"></span>
+                  {{navigation}}
+            </div>
+            <div class="single-footer" id="second">
+              <h5 class="clean-space">Articles</h5>
+              <span class="line"></span>
+              <ul>
+                <li>
+                  <a href="tag/webdevelopment/">Web Development</a>
+                </li>
+                <li>
+                  <a href="tag/photography/">Photography & Graphic Design</a>
+                </li>
+              </ul>
+
+            </div>
+            <div class="single-footer technologies" id="third">
+              <h5 class="clean-space">Technologies</h5>
+              <span class="line"></span>
+              <ul>
+                <li>
+                  <a href="tag/webdevelopment/">NodeJS</a>
+                </li>
+                <li>
+                  <a href="tag/webdevelopment/">Ionic</a>
+                </li>
+                <li>
+                  <a href="tag/webdevelopment/">AngularJS</a>
+                </li>
+                <li>
+                  <a href="tag/webdevelopment/">MongoDB</a>
+                </li>
+              </ul>
+            </div>
+            <div class="single-footer" id="fourth">
+              <!-- <h5>Linkedin</h5>
+              <span class="line" style="margin-bottom:30px;"></span>
+              <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="it_IT" data-type="vertical" data-theme="light" data-vanity="paolo-mangia-417762125"><a class="LI-simple-link" href='https://it.linkedin.com/in/paolo-mangia-417762125?trk=profile-badge'>Paolo Mangia</a></div> -->
+              <h5>Contacts</h5>
+              <span class="line"></span>
+              <ul>
+                <li>
+                  <a class="mail" href="mailto:paolo.mangia.dev@gmail.com">
+                  <div class="footer-icon">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                  </div>
+                  <div class="footer-contact">
+                    <p>paolo.mangia.dev@gmail.com</p>
+                  </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="fb" href="https://www.facebook.com/scratur">
+                  <div class="footer-icon">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </div>
+                  <div class="footer-contact">
+                    <p>facebook.com/scratur</p>
+                  </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="fb" href="https://github.com/paolomangiadev">
+                  <div class="footer-icon">
+                    <i class="fa fa-github" aria-hidden="true"></i>
+                  </div>
+                  <div class="footer-contact">
+                    <p>github.com/paolomangiadev</p>
+                  </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <span class="stretch"></span>
+            </div>
+
+            <!-- Begin MailChimp Signup Form -->
+            <div id="mc_embed_signup">
+            <video class="codingVid" src="/assets/css/coding.webm" loop autoplay>
+
+            </video>
+            <form action="//spazionautilus.us13.list-manage.com/subscribe/post?u=4c3743300c19cdc8949c7c12c&amp;id=1dd6b46d34" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+              <h3 class="newsletter">Subscribe to 02Hero</h3>
+              <p style="font-size:1.5rem">
+                Get the latest posts delivered right to your inbox.
+              </p>
+            <div class="mc-field-group">
+              <label style="text-align:left" for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+            </label>
+              <input id="email_footer" type="email" placeholder="Your email address" name="EMAIL" class="required email" id="mce-EMAIL">
+            </div>
+              <div id="mce-responses" class="clear">
+                <div class="response" id="mce-error-response" style="display:none"></div>
+                <div class="response" id="mce-success-response" style="display:none"></div>
+              </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_4c3743300c19cdc8949c7c12c_1dd6b46d34" tabindex="-1" value=""></div>
+                <div class="clear"><button class="buttonHome" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">Subscribe</button></div>
+                </div>
+            </form>
+            </div>
+            <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email'; /*
+             * Translated default messages for the $ validation plugin.
+             * Locale: IT
+             */}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+            <!--End mc_embed_signup-->
+
+            <div id="footer-padding">
+            <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+            </div>
+
+        </footer>
+
+    </div>
+
+    {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    {{!-- Ghost outputs important scripts and data with this tag --}}
+    {{ghost_foot}}
+    {{!-- Fitvids makes video embeds responsive and awesome --}}
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    {{!-- The main JavaScript file for Casper --}}
+    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/prism.js"}}"></script>
+    <script id="dsq-count-scr" src="//paolomangiadev.disqus.com/count.js" async></script>
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+
+</body>
+</html>
