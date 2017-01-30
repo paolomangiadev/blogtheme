@@ -1070,6 +1070,10 @@ body.nav-opened .nav {
     background: rgba(0, 0, 0, 0.35);
 }
 
+.post-template h2, .post-template h3 {
+    margin: 0 0 0.75em 0;
+}
+
 #container-wrapper {
   width: 100%;
   margin: 0 auto;
