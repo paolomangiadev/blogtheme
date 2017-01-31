@@ -2431,6 +2431,13 @@ body:not(.post-template) .post-title {
         border-left: none;
     }
 
+    .aboutme {
+        padding: 0 180px 30px 180px;
+    }
+    .blog-logo img {
+    padding: 0px 0;
+    }
+
 }
 
 
