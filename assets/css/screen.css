@@ -2274,6 +2274,7 @@ body:not(.post-template) .post-title {
 @media only screen and (max-width: 1200px) {
     .aboutme {
       padding: 0 180px;
+      height: auto;
     }
     .scroll-down {
       left: auto;
