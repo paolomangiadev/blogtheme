@@ -2473,6 +2473,9 @@ body:not(.post-template) .post-title {
     .custom-container {
         padding: 0 60px;
     }
+    #mc_embed_signup form #mc-embedded-subscribe {
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 875px) {
