@@ -2309,6 +2309,9 @@ body:not(.post-template) .post-title {
   .post {
     width: 50%;
   }
+  .single-footer {
+    width: 45%;
+  }
 }
 @media only screen and (max-width: 1050px) {
 
