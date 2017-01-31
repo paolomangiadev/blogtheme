@@ -2271,7 +2271,7 @@ body:not(.post-template) .post-title {
     float: left;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1500px) {
     .aboutme {
       padding: 0 180px;
       height: auto;
