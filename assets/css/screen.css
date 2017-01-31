@@ -2303,6 +2303,15 @@ body:not(.post-template) .post-title {
   .post-excerpt p {
     font-size: 0.8em;
   }
+  .post-meta {
+    font-size: 1.3rem;
+  }
+  .post {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 1050px) {
+
 }
 
 /* ==========================================================================
