@@ -2276,6 +2276,9 @@ body:not(.post-template) .post-title {
       padding: 0 180px;
     }
     .scroll-down {
+      left: auto;
+      margin: 0 auto;
+      position: relative;
       display: inline-block;
       width: 34px;
       padding: 20px 0;
