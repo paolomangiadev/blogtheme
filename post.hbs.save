@@ -31,6 +31,7 @@
           <h1 class="post-title">{{title}}</h1>
           <section class="post-meta">
               <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
+              <a href="{{url}}#disqus_thread">Comments</a>
           </section>
       </header>
       {{/unless}}
@@ -68,13 +69,17 @@
 
             <section class="share">
                 <h4>Share this post</h4>
-                <a class="fa fa-twitter-square" aria-hidden="true" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
-                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-                    <span class="hidden">Twitter</span>
-                </a>
                 <a class="fa fa-facebook-square" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
                     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                     <span class="hidden">Facebook</span>
+                </a>
+                <a class="fa fa-linkedin-square" aria-hidden="true" href="https://www.linkedin.com/shareArticle?mini=true&url={{url absolute="true"}}&title={{encode title}}"
+                   onclick="window.open(this.href, 'linkedin-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+                <a class="fa fa-twitter-square" aria-hidden="true" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
                 </a>
                 <a class="fa fa-google-plus-square" aria-hidden="true" href="https://plus.google.com/share?url={{url absolute="true"}}"
                    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
@@ -94,22 +99,27 @@
             {{/if}}
 
         </footer>
-
         <div id="disqus_thread"></div>
-<script>
+        <script>
 
-/**
- *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
- *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
-/*
-var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = '//paolomangiadev.disqus.com/embed
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+        var disqus_config = function () {
+            this.page.url = '{{url absolute="true"}}'  // Replace PAGE_URL with your page's canonical URL variable
+            console.log('first: ' + this.page.url);
+            this.page.identifier = '{{id}}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            console.log('second: ' + this.page.identifier);
+        };
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://paolomangiadev.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
 
     </article>
 
