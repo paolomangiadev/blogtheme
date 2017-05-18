@@ -8,7 +8,9 @@
 
 
     var $document = $(document);
-
+    if (!$('nav.pagination').children('a').length) {
+        $('nav.pagination').hide();
+    }
     $document.ready(function () {
 
         var $postContent = $(".post-content");
