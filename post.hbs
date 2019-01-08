@@ -1,15 +1,15 @@
 {{!< default}} {{!-- The comment above "< default" means - insert everything in this file into
     the {{{body}} } of
   the default.hbs template, containing the blog header/footer. --}}
-  {{!-- Everything inside the #post tags pulls data from the post --}} {{#post}} <header class="main-header post-head {{#if profile_image}}"
-  style="background-image: url({{img_url}}){{else}}no-cover{{/if}}">
-  <nav class="main-nav {{#if profile_image}}overlay{{/if}} clearfix">
+  {{!-- Everything inside the #post tags pulls data from the post --}} {{#post}} <header class="main-header post-head {{#if feature_image}}"
+  style="background-image: url({{img_url feature_image}}){{else}}no-cover{{/if}}">
+  <nav class="main-nav {{#if feature_image}}overlay{{/if}} clearfix">
     {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
     {{#if @blog.navigation}}
     <a class="menu-button icon-menu" href="#"></a>
     {{/if}}
   </nav>
-  {{#if profile_image}}
+  {{#if feature_image}}
   <div class="vertical" id="postHeader">
     <div class="main-header-content inner">
       <h1 class="page-title">{{title}}</h1>
@@ -22,7 +22,7 @@
 
   <main class="content" role="main">
     <article class="{{post_class}}">
-      {{#unless img_url}}
+      {{#unless feature_image}}
       <header class="post-header">
         <h1 class="post-title">{{title}}</h1>
         <section class="post-meta">
@@ -44,7 +44,7 @@
 
         {{#if profile_image}}
         <figure class="author-image">
-          <a class="img" href="{{url}}" style="background-image: url({{img_url}})"><span class="hidden">{{name}}'s
+          <a class="img" href="{{url}}" style="background-image: url({{img_url profile_image}})"><span class="hidden">{{name}}'s
               Picture</span></a>
         </figure>
         {{/if}}
@@ -128,7 +128,7 @@
   {{!-- Links to Previous/Next posts --}}
   <aside class="read-next">
     {{#next_post}}
-    <a class="read-next-story {{#if profile_image}}" style="background-image: url({{img_url}}){{else}}no-cover{{/if}}"
+    <a class="read-next-story {{#if feature_image}}" style="background-image: url({{img_url feature_image}}){{else}}no-cover{{/if}}"
       href="{{url}}">
       <section class="post footerPost">
         <h2>{{title}}</h2>
@@ -137,7 +137,7 @@
     </a>
     {{/next_post}}
     {{#prev_post}}
-    <a class="read-next-story prev {{#if profile_image}}" style="background-image: url({{img_url}}){{else}}no-cover{{/if}}"
+    <a class="read-next-story prev {{#if feature_image}}" style="background-image: url({{img_url feature_image}}){{else}}no-cover{{/if}}"
       href="{{url}}">
       <section class="post footerPost">
         <h2>{{title}}</h2>
