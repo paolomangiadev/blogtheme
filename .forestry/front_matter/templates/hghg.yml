@@ -1,4 +1,13 @@
 ---
 label: hghg
 hide_body: true
-fields: []
+fields:
+- name: hhhh
+  type: blocks
+  label: bbbb
+  template_types:
+  - hghg
+  config:
+    min: 
+    max: 
+  description: bbbb
